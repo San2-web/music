@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>歌词收藏</title>
+  <meta name="description" content="个人喜爱的歌词收藏展示">
+  <meta name="keywords" content="歌词,音乐,收藏,创作参考">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A0C10;
+      color: #E5E7EB;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="container mx-auto px-4 py-12 max-w-6xl">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+        我的歌词收藏
+      </h1>
+      <p class="text-gray-400">精选歌词，创作灵感源泉</p>
+    </header>
+
+    <div id="app" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 歌词卡片将通过JavaScript动态渲染 -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="test.js"></script>
+  
+  <!-- 控制按钮 -->
+  <div class="fixed bottom-4 right-4 flex flex-col gap-4">
+    <button 
+      onclick="runTests()" 
+      class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition-colors"
+    >
+      运行测试
+    </button>
+    <button 
+      onclick="createNewLyricCard()" 
+      class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg transition-colors"
+    >
+      <i class="fas fa-plus mr-2"></i>添加卡片
+    </button>
+  </div>
+</body>
+</html>
